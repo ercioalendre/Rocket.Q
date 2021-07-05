@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --light-red: #FFEFF1;
+    --blue: #3485FF;
+    --light-blue: #E0ECFF;
+    --light-green: #C8F7C5;
+    --background: #F6FAFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-medium: #EAECF1;
+    --grey-light: #E5EAF1;
+
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    /* width: 100%; */
+    background: var(--background);
+}
+
+body, button, input, textarea{
+    font-size: clamp(14px, 1.6rem, 2vw);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Inputs and Buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input, button, .button{
+    height: 5rem;
+    border-radius: .8rem;
+}
+
+button, .button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    transition: filter .2s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2);
+}
+
+button > img, .button > img{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.home > img, .button.home > img{
+    margin-bottom: 0.55rem;
+}
+
+button.outlined, .button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+button.red, .button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey, .button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+button.red:hover, .button.red:hover{
+    filter: brightness(1.05);
+}
+
+button.grey:hover, .button.grey:hover{
+    filter: brightness(96%);
+}
+
+/* Header */
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
+}

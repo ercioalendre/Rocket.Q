@@ -1,0 +1,22 @@
+{
+  "name": "rocket.q",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido em parceria com a Rocketseat para gerenciar perguntas anonimas dos usuários.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon main",
+    "init-db": "node src/database/init.js"
+  },
+  "keywords": [],
+  "author": "Ercio Alendre",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

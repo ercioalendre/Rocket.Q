@@ -1,0 +1,10 @@
+const express =  require('express');
+const app = express();
+const router = require('./router');
+const path = require('path');
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.urlencoded({extended: true}));
+app.use(router);
+app.listen(3000, () => console.log("INICIALIZADO COM SUCESSO"));

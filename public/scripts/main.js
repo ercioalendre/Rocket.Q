@@ -26,9 +26,9 @@ checkTrashButtons.forEach(button => {
 
 function handleClick(event, check = true){
     event.preventDefault();
-    const title = check ? "Marcar pergunta como lida" : "Excluir pergunta";
-    const description = check ? "marcar esta pergunta como lida?" : "excluir esta pergunta?";
-    const text = check ? "Marcar como lida" : "Excluir";
+    const title = check ? "Mark question as read" : "Delete this question";
+    const description = check ? "mark this question as read?" : "delete this question?";
+    const text = check ? "Mark as read" : "Delete";
     const slug = check ? "mark-as-read" : "delete";
     const questionId = event.target.dataset.id;
     const roomId = document.querySelector("#room-id").dataset.id;
@@ -40,7 +40,7 @@ function handleClick(event, check = true){
     form.setAttribute("action", `/room/${roomId}/manage-question`);
 
     modalTitle.innerHTML= `${title}`;
-    modalDescription.innerHTML= `Você tem certeza que deseja ${description.toLowerCase()}`;
+    modalDescription.innerHTML= `Are you sure you wanna ${description.toLowerCase()}`;
     modalConfirmButton.innerHTML= `${text}`;
     check ? modalConfirmButton.classList.remove("red") : modalConfirmButton.classList.add("red");
     

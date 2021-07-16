@@ -3,10 +3,10 @@
 </h1>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#memo-license">License</a>
 </p>
 
 <p align="center">
@@ -21,9 +21,9 @@
   <img alt="Rocket.Q" src=".github/Rocket_Q.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
+This project was developed with the following technologies:
 
 - HTML
 - CSS
@@ -33,14 +33,14 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - Express
 - SQLite
 
-## 💻 Projeto
+## 💻 Project
 
-O Rocket.Q é uma aplicação desenvolvida em parceria com a [Rocketseat](https://rocketseat.com.br) de interação através de perguntas, sendo possível criar uma sala para internautas anônimos fazerem perguntas. O criador da sala  tem o poder de gerenciar essas perguntas (através de uma autenticação por senha), marcando as perguntas como lidas ou excluindo as mesmas.
+Rocket.Q is an application that allows it's users to create a room for anonymous internet users ask them questions. The room creator has the power to manage these questions (via password authentication), marking the questions as read or deleting them. Rocket.Q was developed in partnership with [Rocketseat](https://rocketseat.com.br).
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/ShlQVmFzTp8InCeZapen4d/Roquet.Q). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+You can see and copy the layout of the project through [this link](https://www.figma.com/file/ShlQVmFzTp8InCeZapen4d/Roquet.Q). An account on [Figma](https://figma.com) is required to access it.
 
-## :memo: Licença
+## :memo: License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE) para mais detalhes.
+This project is under MIT license. See the file [LICENSE](.github/LICENSE) for further details.

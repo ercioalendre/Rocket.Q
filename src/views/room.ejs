@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Title -->
-        <title>Rocket.Q | Perguntas e Respostas</title>
+        <title>Rocket.Q | Questions Room (<%= roomId %>)</title>
         
         <!-- CSS -->
         <link rel="stylesheet" href="/styles/main.css">
@@ -35,7 +35,7 @@
                     </div>
                     <a href="/new-room" class="button">
                         <img src="/images/users-white.svg" alt="Criar uma sala">
-                        Criar Sala
+                        Create new room
                     </a>
                 </div>
             </header>
@@ -45,10 +45,10 @@
                     <div class="message-wrapper error" id="message-wrapper">
                         <div class="message-content">
                             <p>
-                                <img src="/images/error.svg" alt="Atenção">
+                                <img src="/images/error.svg" alt="Warning">
                                 <%= msgContent; %>
                             </p>
-                            <img src="/images/close.svg" alt="Atenção" class="close-error" id="close-error">
+                            <img src="/images/close.svg" alt="Close" class="close-error" id="close-error">
                         </div>
                     </div>
                     <% }; %>
@@ -56,29 +56,29 @@
                         <div class="message-wrapper success" id="message-wrapper">
                             <div class="message-content">
                                 <p>
-                                    <img src="/images/success.svg" alt="Atenção">
+                                    <img src="/images/success.svg" alt="Success">
                                     <%= msgContent; %>
                                 </p>
-                                <img src="/images/close.svg" alt="Atenção" class="close-error" id="close-error">
+                                <img src="/images/close.svg" alt="Warning" class="close-error" id="close-error">
                             </div>
                         </div>
                         <% }; %>
-                    <h2>Faça uma pergunta</h2>
+                    <h2>Ask me a question</h2>
                     <form action="/room/<%= roomId %>/new-question" method="POST">
-                        <label class="scr-only" for="question">O que você deseja perguntar?</label>
-                        <textarea name="question" id="question" placeholder="O que você deseja perguntar?"></textarea>
+                        <label class="scr-only" for="question">What you wanna ask me?</label>
+                        <textarea name="question" id="question" placeholder="What you wanna ask me?"></textarea>
                         <footer>
                             <div>
-                                <img src="/images/lock.svg" alt="Cadeado">
-                                Esta pergunta é anonima.
+                                <img src="/images/lock.svg" alt="Lock">
+                                This is an anonymous question.
                             </div>
-                            <button>Enviar</button>
+                            <button>Send</button>
                         </footer>
                     </form>
                 </section>
 
                 <section id="questions">
-                    <h2 class="scr-only">Perguntas da comunidade</h2>
+                    <h2 class="scr-only">Community questions</h2>
                     <div class="questions">
                         <% if(!isThereAnyQuestion){ %>
                             <%- include('parts/no-questions'); %>
@@ -95,12 +95,12 @@
                                 </div>
                                 <div class="actions">
                                     <a href="#" class="check" data-name="mark-as-read" data-id="<%= questions.id %>">
-                                        <img src="/images/check.svg" alt="Marcar como lida">
-                                        Marcar como lida
+                                        <img src="/images/check.svg" alt="Mark as read">
+                                        Mark as read
                                     </a>
                                     <a href="#" class="trash" data-name="delete" data-id="<%= questions.id %>">
-                                        <img src="/images/trash.svg" alt="Excluir">
-                                        Excluir
+                                        <img src="/images/trash.svg" alt="Delete">
+                                        Delete
                                     </a>
                                 </div>
                             </div>
@@ -117,12 +117,12 @@
                                 </div>
                                 <div class="actions">
                                     <a href="#" class="check-not-read" data-name="mark-as-not-read" data-id="<%= questionsRead.id %>">
-                                        <img src="/images/not-read.svg" alt="Marcar como lida">
-                                        Marcar como não lida
+                                        <img src="/images/not-read.svg" alt="Mark as not read">
+                                        Mark as not read
                                     </a>
                                     <a href="#" class="trash" data-name="delete" data-id="<%= questionsRead.id %>">
-                                        <img src="/images/trash.svg" alt="Excluir">
-                                        Excluir
+                                        <img src="/images/trash.svg" alt="Delete">
+                                        Delete
                                     </a>
                                 </div>
                             </div>
@@ -134,18 +134,18 @@
         <!-- MODAL -->
         <div class="modal-wrapper">
             <div class="modal">
-                <h2>Excluir pergunta</h2>
-                <p>Você tem certeza que deseja excluir esta pergunta?</p>
+                <h2>Delete this question</h2>
+                <p>Are you sure you wanna delete this question?</p>
                 <form action="#" method="POST">
-                    <label for="password" class="scr-only">Digite sua senha</label>
-                    <input id="password" name="password" type="password" placeholder="Digite sua senha" required>
+                    <label for="password" class="scr-only">Insert the room password</label>
+                    <input id="password" name="password" type="password" placeholder="Insert the room password" required>
                     <input id="questionAction" name="questionAction" type="hidden">
                     <input id="questionId" name="questionId" type="hidden">
                     <div class="buttons">
                         <div class="button grey cancel">
-                            Cancelar
+                            Cancel
                         </div>
-                        <button class="red">Excluir</button>
+                        <button class="red">Delete</button>
                     </div>
                 </form>
             </div>

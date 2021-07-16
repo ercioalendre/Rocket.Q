@@ -19,16 +19,16 @@ module.exports = {
                     await db.run(`UPDATE questions SET isRead = 1 WHERE id = ${questionId} AND roomId = ${roomId}`);
                     db.close();
                     msgType = "success";
-                    msgContent = "Pergunta marcada como lida com sucesso!"
+                    msgContent = "The question was successfully marked as read!"
                 }else if(action === "delete"){
                     await db.run(`DELETE FROM questions WHERE id = ${questionId} AND roomId = ${roomId}`);
                     db.close();
                     msgType = "success";
-                    msgContent = "Pergunta excluída com sucesso!"
+                    msgContent = "The question was successfully deleted!"
                 };
             }else{
                 msgType = "error";
-                msgContent = "A senha que você digitou está incorreta!"
+                msgContent = "The password you entered is incorrect!"
                 await db.close();
             };
             res.render("room", {roomId: roomId, isThereAnyQuestion: await Room.isThereAnyQuestion(roomId), questions: await Room.getQuestions("not-read", roomId), questionsRead: await Room.getQuestions("read", roomId), msgType: msgType, msgContent: msgContent});
@@ -45,7 +45,7 @@ module.exports = {
         await db.run(`INSERT INTO questions (question,roomId,isRead) VALUES ("${question}",${roomId},0)`);
         await db.close();
         msgType = "success";
-        msgContent = "Pergunta enviada com sucesso!"
+        msgContent = "The question was successfully sent!"
         res.render("room", {roomId: roomId, isThereAnyQuestion: await Room.isThereAnyQuestion(roomId), questions: await Room.getQuestions("not-read", roomId), questionsRead: await Room.getQuestions("read", roomId), msgType: msgType, msgContent: msgContent});
     }
 }

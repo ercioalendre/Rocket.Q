@@ -44,26 +44,26 @@ You can see and copy the layout of the project through [this link](https://www.f
 
 ## 🧰 Setup
 
-##### 1. Clone the repo
+#### 1. Clone the repo
 ```sh
 $ git clone https://github.com/ercioalendre/Rocket.Q.git
 $ cd Rocket.Q
 ```
 or [download it here](https://github.com/ercioalendre/Rocket.Q/archive/refs/heads/main.zip).
 
-##### 2. Install all dependencies
+#### 2. Install all dependencies
 ```sh
 # with npm
 npm install
 ```
 
-##### 3. Start the server
+#### 3. Start the server
 ```sh
 # with npm
 npm start
 ```
 
-##### 4. All set and done
+#### 4. All set and done
 That's it! You can now see it up and running on [http://localhost:3000](http://localhost:3000)
 
 ## :memo: License

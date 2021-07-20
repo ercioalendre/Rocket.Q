@@ -1,7 +1,7 @@
 {
   "name": "rocket.q",
-  "version": "1.0.0",
-  "description": "Projeto desenvolvido em parceria com a Rocketseat para gerenciar perguntas anonimas dos usuários.",
+  "version": "1.0.9",
+  "description": "Rocket.Q is an application that allows it's users to create a room for anonymous internet users ask them questions.",
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon main",

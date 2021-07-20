@@ -3,6 +3,7 @@
 </h1>
 
 <p align="center">
+  <a href="#-setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -40,6 +41,30 @@ Rocket.Q is an application that allows it's users to create a room for anonymous
 ## 🔖 Layout
 
 You can see and copy the layout of the project through [this link](https://www.figma.com/file/ShlQVmFzTp8InCeZapen4d/Roquet.Q). An account on [Figma](https://figma.com) is required to access it.
+
+## 🧰 Setup
+
+##### 1. Clone the repo
+```sh
+$ git clone https://github.com/ercioalendre/Rocket.Q.git
+$ cd Rocket.Q
+```
+or [download it here](https://github.com/ercioalendre/Rocket.Q/archive/refs/heads/main.zip).
+
+##### 2. Install all dependencies
+```sh
+# with npm
+npm install
+```
+
+##### 3. Start the server
+```sh
+# with npm
+npm start
+```
+
+##### 4. All set and done
+That's it! You can now see it up and running on [http://localhost:3000](http://localhost:3000)
 
 ## :memo: License
 

@@ -54,7 +54,7 @@ or [download it here](https://github.com/ercioalendre/Rocket.Q/archive/refs/head
 #### 2. Install all dependencies
 ```sh
 # with npm
-npm install
+npm ci
 ```
 
 #### 3. Start the server

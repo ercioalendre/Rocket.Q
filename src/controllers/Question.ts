@@ -1,4 +1,4 @@
-const Database = require("../database/config");
+import Database from "../database/config";
 const Room = require("./Room");
 
 module.exports = {
@@ -44,8 +44,8 @@ module.exports = {
 
         await db.run(`INSERT INTO questions (question,roomId,isRead) VALUES ("${question}",${roomId},0)`);
         await db.close();
-        msgType = "success";
-        msgContent = "The question was successfully sent!"
+        const msgType = "success";
+        const msgContent = "The question was successfully sent!"
         res.render("room", {roomId: roomId, isThereAnyQuestion: await Room.isThereAnyQuestion(roomId), questions: await Room.getQuestions("not-read", roomId), questionsRead: await Room.getQuestions("read", roomId), msgType: msgType, msgContent: msgContent});
     }
 }

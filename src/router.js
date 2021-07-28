@@ -1,6 +1,6 @@
 const express = require("express");
-const Question = require("./controllers/Question.js");
-const Room = require("./controllers/Room.js");
+const Question = require("./controllers/Question");
+const Room = require("./controllers/Room");
 const router = express.Router();
 router.get("/", (req, res) => res.render("index", {page: "manage-room"}));
 router.get("/new-room", (req, res) => res.render("index", {page: "new-room"}));

@@ -1,4 +1,4 @@
-const Database = require("../database/config");
+import Database from "../database/config";
 
 function RoomIdGenerator(){
     const roomId = Math.floor(100000 + Math.random() * 900000);
@@ -91,13 +91,13 @@ module.exports = {
 
     async create(req, res){
         const db = await Database();
-        roomId = await RoomIdGenerator();
+        const roomId = await RoomIdGenerator();
         const password = req.body.password;
         let isRoomIdTaken;
 
         do {
             if(await module.exports.checkIfRoomExists(roomId)){
-                roomId = RoomIdGenerator();
+                const roomId = RoomIdGenerator();
                 isRoomIdTaken = true;
             }else{
                 isRoomIdTaken = false;

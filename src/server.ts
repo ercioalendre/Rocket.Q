@@ -1,7 +1,7 @@
-const express =  require('express');
+import express from "express";
+import router from "./router";
+import path from "path";
 const app = express();
-const router = require('./router');
-const path = require('path');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));

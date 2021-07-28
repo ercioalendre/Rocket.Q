@@ -29,6 +29,7 @@ This project was developed with the following technologies:
 - HTML
 - CSS
 - JavaScript
+- TypeScript
 - NodeJS
 - EJS
 - Express
@@ -60,7 +61,7 @@ npm ci
 #### 3. Start the server
 ```sh
 # with npm
-npm start
+npm run dev
 ```
 
 #### 4. All set and done

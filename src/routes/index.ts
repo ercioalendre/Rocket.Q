@@ -11,4 +11,4 @@ router.get("/room/:roomId/:go", Room.index);
 router.post("/room/enter", Room.enter);
 router.post("/room/:roomId/new-question", Question.create);
 router.post("/room/:roomId/manage-question", Question.manage);
-module.exports = router;
+export default router;
